@@ -1,5 +1,6 @@
 class AuthenticateController < ApplicationController
   def login
+    @author = Author.new
     if request.post?
       author = Author.find_by(email: params[:email])
 
